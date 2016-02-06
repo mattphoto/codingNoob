@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1"> 
+      <br />
+      <button class="btn btn-primary" ng-click='newResource()'> Add Resource </button>
+      <br />    <br />
+
+      <input class="form-control" ng-model="search">
+      <br />
+      <table class='table table-hover table-striped table-condensed table-bordered'>
+        <thead>
+          <tr>
+            <th> Title</th>
+            <th> URL </th>
+            <th> Category </th>
+            <th> Description </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="resource in resources | filter: search | orderBy:'title'">
+              <td  ng-click="gotoDetailView(resource)"> {{ resource.title }} </td>
+              <td> {{ resource.url }} </td>
+              <td> {{ resource.category }} </td>
+              <td> {{ resource.description }} </td>
+              <td> <a href="#" ng-click="delete(resource._id)">delete</a>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
