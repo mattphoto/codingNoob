@@ -4,9 +4,9 @@ var express = require('express'),
     mongoose = require('mongoose'), 
     bodyParser = require('body-parser');
 
-var user = 'mattkim';
-var pass = 'stupid';
-var mongolab = '@ds027908.mongolab.com:27908/codingnoob'
+var user = process.env.LOGIN;
+var pass = process.env.PASS;
+var mongolab = process.env.MONGO;
 
 var db = mongoose.connect('mongodb://'+user+':'+pass+ mongolab);
 
