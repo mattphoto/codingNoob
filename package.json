@@ -1,11 +1,14 @@
 {
-  "name": "restful",
+  "name": "codingNoob",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "4.2.4"
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
