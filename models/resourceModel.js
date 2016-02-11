@@ -2,11 +2,18 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var resourceModel = new Schema({
+  rating: { type: Number, min: 0, max: 99 },
+  cost: {type: String},
+
+  category: {type: String},
   title: {type: String},
   url: {type: String},
-  category: {type: String},
+  author: {type: String},
   description: {type: String},
-  // read: {type: Boolean, default: false},
+
+  difficulty: {type: String},
+  type: {type: String},
+  length: {type: String},
   date: {type: String}
 });
 

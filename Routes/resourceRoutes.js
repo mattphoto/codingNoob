@@ -46,11 +46,20 @@ var routes = function (Resource) {
       res.json(req.resource);
     })
     .put(function (req, res) {
-      req.resource.title = req.body.title;
-      req.resource.url = req.body.url;
+      req.resource.rating = req.body.rating;
+      req.resource.cost = req.body.cost;
+
       req.resource.category = req.body.category;
+      req.resource.title = req.body.title;
+      req.resource.author = req.body.author;
+      req.resource.url = req.body.url;
       req.resource.description = req.body.description;
-      // req.resource.date = req.body.date;
+
+      req.resource.difficulty = req.body.difficulty;
+      req.resource.type = req.body.type;
+      req.resource.length = req.body.length;
+      req.resource.date = req.body.date;
+
       req.resource.save(function (err) {
         if(err){
           res.status(500).send(err);

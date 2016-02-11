@@ -4,7 +4,7 @@
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="http://lorempixel.com/64/64/abstract/{{ $index }}" alt="...">
+          <img class="media-object" ng-src="http://lorempixel.com/64/64/abstract/{{ $index + 1 }}" alt="...">
         </a>
       </div>
       <div class="media-body">
@@ -12,6 +12,12 @@
         <p>
           {{resource.description}} 
         </p>
+      </div>
+      <div class="media-right hidden-xs">
+        <a href="#">
+          <img class="media-object" ng-src="http://lorempixel.com/64/64/abstract/{{ $index + 2 }}" alt="...">
+        </a>
+        <p>free</p>
       </div>
     </div>
   </div>
