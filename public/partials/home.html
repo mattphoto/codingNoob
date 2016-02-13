@@ -9,15 +9,27 @@
         <p style="margin: 0 auto; text-align: center;">{{resource.cost}}</p>
       </div>
       <div class="media-body">
-        <p class="media-title">{{resource.title}}</p>
-        <p class="media-description">
+        <a href="{{ resource.url }}" class="media-title" target="_blank">{{resource.title}}</a>
+        <p class="media-author">
+          by {{resource.author}} 
+        </p>
+<!--         <p class="media-description">
           {{resource.description}} 
         </p>
-      </div>
-      <div class="media-right media-right__width hidden-xs hidden-sm">
-
-        <p>AWESOMER&nbsp;Revenue&nbsp;was&nbsp;rather &nbsp; low&nbsp;this&nbsp;year</p>
-
+ -->      </div>
+      <div class="media-right media-criterion hidden-xs hidden-sm">
+        <p class="media-criterion__difficulty">
+          <span class="glyphicon glyphicon-stop green" aria-hidden="true"></span>&nbsp;
+          {{resource.difficulty}} 
+        </p>
+        <p class="media-criterion__difficulty">
+          <span class="glyphicon glyphicon-stop yellow" aria-hidden="true"></span>&nbsp;
+          {{resource.date}} 
+        </p>
+        <p class="media-criterion__difficulty">
+          <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>&nbsp;
+          {{resource.type}} <span class="media-criterion__length">| {{resource.length}}</span>
+        </p>
       </div>
     </div>
   </div>
