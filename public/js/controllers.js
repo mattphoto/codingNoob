@@ -2,20 +2,7 @@ angular.module('myApp')
   .controller('HomeController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {
     $http.get('api').success(function(data) {
       $scope.resources = data;
-      $scope.gotoDetailView = function (resource) {
-        $location.url('/admin/' + resource._id);
-      }
-      $scope.delete = function (id) {
-        $http.delete('api/' + id).success(function () {
-          console.log('deleted');
-          $route.reload();
-        })
-      }
-      $scope.newResource = function () {
-        $location.url('/admin/new');
-      }
     });
-    $scope.hello = "main route!"
   }]);
 
 angular.module('myApp')
