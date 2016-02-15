@@ -1,8 +1,10 @@
 angular.module('myApp')
-  .controller('HomeController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {
+  .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
     $http.get('api').success(function(data) {
       $scope.resources = data;
-    });
+        $rootScope.path = $location.path().slice(1);
+    console.log($rootScope.path);
+});
   }]);
 
 angular.module('myApp')

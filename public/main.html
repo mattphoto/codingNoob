@@ -16,6 +16,8 @@
 
 </head>
 
+            <!-- An opinionated list of coding resources by a noob for noobs -->
+
 <body ng-app="myApp" ng-cloak layout="column">
   <div id="wrapper">
   <!-- Sidebar -->
@@ -23,17 +25,17 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
           <a href="/">
-            Coding Noob
+            CodingNoob
           </a>
         </li>
         <li>
-          <a href="#">JavaScript</a>
+          <!-- <a href="#" ng-class="selected : path == javascript">JavaScript</a> -->
         </li>
         <li>
           <a href="#">HTML</a>
         </li>
         <li>
-          <a href="#">CSS</a>
+          <a href="#" ng-class="{'green' : path === 'java'}">CSS</a>
         </li>
         <li>
           <a href="#">Roadmaps</a>
@@ -51,15 +53,10 @@
     </div>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
-    <div class="page-content-head container-fluid">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12">
-          <p class="section-head-text">
-          <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-
-          
-            Section Head
-          </p>
+        <div class="topic-head col-xs-12">
+          <a href="#menu-toggle" id="menu-toggle" class="visible-xs topic-head-text" >&#9776; {{path}}</a><p class="topic-head-text hidden-xs" ng-cloak>{{ path }}</p>
         </div>
       </div>
     </div>

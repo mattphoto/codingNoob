@@ -11,12 +11,7 @@ body {
   font-family:  'open sans', arial, sans-serif;
 }
 
-
-
 /*********************************************/
-
-
-
 
 /* Toggle Styles */
 
@@ -113,6 +108,18 @@ body {
     background: none;
 }
 
+.logo {
+  padding: 15px;
+}
+
+ul li a.logo-title {
+  color: darkgray;
+  font-weight: 900
+  font-size: 28px;
+}
+
+
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
@@ -196,7 +203,7 @@ th {
 }
 
 .media-rating.media-rating_gray {
-  background-color: gray;  
+  background-color: lightgray;  
 }
 
 .media-cost {
@@ -245,6 +252,10 @@ th {
   color: green;
 }
 
+.gray {
+  color: lightgray;
+}
+
 .yellow {
   color: yellow;
 }
@@ -263,12 +274,18 @@ th {
   color: 111;
 }
 
-.page-content-head {
-    background-color: darkgray;
+.topic-head {
+  height: 44px;
+  background-color: lightgray;
 }
 
-.section-head-text {
-    font-size: 24px;
-    font-weight: bold;
+.topic-head-text {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 44px;
 }
 
+a.topic-head-text {
+  text-decoration: none;
+  color: #000;
+}
