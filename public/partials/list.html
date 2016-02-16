@@ -25,7 +25,7 @@
         <tbody>
           <tr ng-repeat="resource in resources | filter: search | orderBy:'title'">
             <td> {{ resource.rating }} </td>
-            <td  ng-click="gotoDetailView(resource._id)"> <a href="">{{ resource.title }}</a> </td>
+            <td  ng-click="gotoDetailView(resource)"> {{ resource.title }} </td>
 
             <td> {{ resource.category }} </td>
             <td> {{ resource.difficulty }} </td>
