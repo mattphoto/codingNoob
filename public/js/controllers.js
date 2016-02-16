@@ -1,19 +1,19 @@
 angular.module('myApp')
-  .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
+  .controller('HomeController', ['$scope', '$rootScope', '$stateParams', '$state', '$http', function($scope, $rootScope, $stateParams, $state, $http) {
     $http.get('api').success(function(data) {
       $scope.resources = data;
-        $rootScope.path = $location.path().slice(1);
+        // $rootScope.path = $location.path().slice(1);
     console.log($rootScope.path);
 });
   }]);
 
 angular.module('myApp')
-.controller('AdminController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {
+.controller('AdminController', ['$scope', '$rootScope', '$stateParams', '$state', '$http', function($scope, $rootScope, $stateParams, $state, $http) {
   $http.get('api').success(function(data) {
     console.log(data[0].title);
     $scope.resources = data;
-    $scope.gotoDetailView = function (resource) {
-      $location.url('/admin/' + resource._id);
+    $scope.gotoDetailView = function (id) {
+      $state.go('admin/'+id);
     }
     $scope.delete = function (id) {
       $http.delete('api/' + id).success(function () {
@@ -22,13 +22,13 @@ angular.module('myApp')
       })
     }
     $scope.newResource = function () {
-      $location.url('/admin/new');
+      $state.go('admin/new');
     }
   });
 }]);
 
 angular.module('myApp')
-.controller('ResourceController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
+.controller('ResourceController', ['$scope', '$rootScope', '$stateParams', '$state', '$http', function($scope, $rootScope, $stateParams, $state, $http) {
   item = $routeParams.id ;
 
   $http.get('api/' + item).success(function(data) {
@@ -47,7 +47,7 @@ angular.module('myApp')
 }]);
 
 angular.module('myApp')
-.controller('NewResourceController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
+.controller('NewResourceController', ['$scope', '$rootScope', '$stateParams', '$state', '$http', function($scope, $rootScope, $stateParams, $state, $http) {
   $scope.resource = {};
   $scope.save = function (resource) {
     $http.post('api/', resource).success(function(data) {
