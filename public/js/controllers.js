@@ -1,13 +1,15 @@
 angular.module('myApp')
-  .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
-    $http.get('api').success(function(data) {
-      $scope.resources = data;
-        $rootScope.path = $location.path().slice(1);
-    console.log($rootScope.path);
-});
-  }]);
 
-angular.module('myApp')
+
+.controller('WelcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
+  $rootScope.path = 'Welcome!';
+}])
+.controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
+  $http.get('api').success(function(data) {
+    $scope.resources = data;
+    $rootScope.path = $location.path().slice(9);
+  });
+}])
 .controller('AdminController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {
   $http.get('api').success(function(data) {
     console.log(data[0].title);
@@ -25,9 +27,7 @@ angular.module('myApp')
       $location.url('/admin/new');
     }
   });
-}]);
-
-angular.module('myApp')
+}])
 .controller('ResourceController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
   item = $routeParams.id ;
 
@@ -40,21 +40,18 @@ angular.module('myApp')
   });
   $scope.update = function(resource) {
     $http.put('api/' + item, resource).success(function(data) {
-    console.log(data);
-    $location.url('/admin');
-  })};
-
-}]);
-
-angular.module('myApp')
+      console.log(data);
+      $location.url('/admin');
+    })};
+  }])
 .controller('NewResourceController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
   $scope.resource = {};
   $scope.save = function (resource) {
     $http.post('api/', resource).success(function(data) {
-    console.log(data);
-    $location.url('/admin');
+      console.log(data);
+      $location.url('/admin');
 
-  });
+    });
     console.log(resource);
   }
 }]);

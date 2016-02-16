@@ -1,30 +1,33 @@
 angular.module('myApp', [
   'ngRoute'
 ])
-  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
-  .when('/:category', {
+  .when('/', {
+    templateUrl: 'partials/welcome.html',
+    controller: 'WelcomeController'
+  })
+  .when('/subject/:category', {
     templateUrl: 'partials/home.html',
     controller: 'HomeController'
   })
   .when('/admin', {
     templateUrl: 'partials/list.html',
     controller: 'AdminController'
-  }).
-   when('/admin/new', {
+  })
+  .when('/admin/new', {
     templateUrl: 'partials/new.html',
     controller: 'NewResourceController'
-  }).
-    when('/admin/:id', {
+  })
+  .when('/admin/:id', {
     templateUrl: 'partials/resource.html',
     controller: 'ResourceController'
-  }).
-  otherwise({
+  })
+
+  .otherwise({
     redirectTo: '/'
   });
-
   $locationProvider.html5Mode(true);
-
 }]);
 
 
