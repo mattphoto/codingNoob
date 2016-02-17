@@ -60,6 +60,7 @@ var routes = function (Resource) {
       req.resource.type = req.body.type;
       req.resource.length = req.body.length;
       req.resource.date = req.body.date;
+      req.resource.date_published = req.body.date_published;
       req.resource.updated_at = new Date();
 
       console.log(req.resource);

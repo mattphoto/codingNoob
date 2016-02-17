@@ -15,6 +15,7 @@ var resourceModel = new Schema({
   type: {type: String},
   length: {type: String},
   date: {type: String},
+  date_published: {type: String},
   created_at: Date,
   updated_at: Date
 
