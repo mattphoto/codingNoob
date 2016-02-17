@@ -2,7 +2,7 @@
 <div class="container-fluid" >
   <div class="row"  ng-repeat="resource in resources | orderBy:'title'">
     <div class="media" >
-      <div class="media-left">
+      <div ng-if="resource.rating !== 100" class="media-left">
         <div ng-class="['media-rating', {'media-rating_gray' : !resource.rating,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
           {{resource.rating}}
         </div>

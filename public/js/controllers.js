@@ -1,13 +1,12 @@
 angular.module('myApp')
 
-
 .controller('WelcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
   $rootScope.path = 'Welcome!';
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
-  $http.get('api').success(function(data) {
+  $rootScope.path = $location.path().slice(9);
+  $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;
-    $rootScope.path = $location.path().slice(9);
   });
 }])
 .controller('AdminController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {

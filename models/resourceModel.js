@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var resourceModel = new Schema({
-  rating: { type: Number, min: 0, max: 99 },
+  rating: { type: Number, min: 0, max: 100 },
   cost: {type: String},
 
   category: {type: String},
@@ -18,4 +18,3 @@ var resourceModel = new Schema({
 });
 
 module.exports = mongoose.model('Resource', resourceModel);
- 

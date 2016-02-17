@@ -19,20 +19,11 @@
 
 <body ng-app="myApp" ng-cloak layout="column">
   <div id="wrapper">
-  <!-- Sidebar -->
-    <div class='col-sm-12' ng-include='"partials/nav.html"'></div>
-
-    <!-- Page Content -->
+    <div ng-include='"partials/nav.html"'></div>
     <div ng-include='"partials/header.html"'></div>
-
-
     <div id="page-content-wrapper">
-
-
       <div ng-view></div>
-
-      </div>
-   <!-- /#page-content-wrapper -->
+    </div>
   </div><!-- /#wrapper -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
