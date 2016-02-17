@@ -9,6 +9,8 @@ var routes = function (Resource) {
     .post(function (req, res) {
       var resource = new Resource(req.body);
       console.log(resource);
+      resource.created_at = new Date();
+
       console.log(req.body);
       resource.save();
       res.status(201).send(resource);
@@ -23,7 +25,6 @@ var routes = function (Resource) {
           res.status(500).send(err);
         else
           res.json(resource);
-        console.log(query);
       });
     });
 
@@ -59,6 +60,9 @@ var routes = function (Resource) {
       req.resource.type = req.body.type;
       req.resource.length = req.body.length;
       req.resource.date = req.body.date;
+      req.resource.updated_at = new Date();
+
+      console.log(req.resource);
 
       req.resource.save(function (err) {
         if(err){

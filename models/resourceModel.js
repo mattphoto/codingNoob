@@ -14,7 +14,10 @@ var resourceModel = new Schema({
   difficulty: {type: String},
   type: {type: String},
   length: {type: String},
-  date: {type: String}
+  date: {type: String},
+  created_at: Date,
+  updated_at: Date
+
 });
 
 module.exports = mongoose.model('Resource', resourceModel);
