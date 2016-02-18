@@ -22,15 +22,15 @@
         </p>
       </div>
       <div class="media-right media-criterion hidden-xs hidden-sm" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false">
-        <p class="media-criterion__difficulty">
+        <p class="media-criterion__difficulty" ng-if="resource.difficulty">
           <span ng-class="['glyphicon', 'glyphicon-stop', 'green']" aria-hidden="true"></span>&nbsp;
           {{resource.difficulty}} 
         </p>
-        <p class="media-criterion__difficulty">
+        <p class="media-criterion__difficulty" ng-if="resource.date_published">
           <span ng-class="['glyphicon', 'glyphicon-stop', {'green' : resource.date === 'fresh', 'yellow' : resource.date === 'stale', 'red' : resource.date === 'old'}]" aria-hidden="true"></span>&nbsp;
           {{resource.date_published}} 
         </p>
-        <p class="media-criterion__difficulty">
+        <p class="media-criterion__difficulty" ng-if="resource.type">
           <span ng-class="['glyphicon', 'glyphicon-stop', 'gray']" aria-hidden="true"></span>&nbsp;
           {{resource.type}} <span class="media-criterion__length">| {{resource.length}}</span>
         </p>
