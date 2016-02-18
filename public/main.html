@@ -18,7 +18,13 @@
 <body ng-app="myApp" ng-cloak layout="column">
   <div id="wrapper">
     <div ng-include='"partials/nav.html"'></div>
-    <div ng-include='"partials/header.html"'></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="topic-head col-xs-12">
+          <a href="#menu-toggle" id="menu-toggle" class="visible-xs topic-head-text" >&#9776; {{path}}</a><p class="topic-head-text hidden-xs" ng-cloak>{{ path }}</p>
+        </div>
+      </div>
+    </div>
     <div id="page-content-wrapper">
       <div ng-view></div>
     </div>
