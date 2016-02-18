@@ -11,7 +11,11 @@ body {
   font-family:  'open sans', arial, sans-serif;
 }
 
-/*********************************************/
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 
 /* Toggle Styles */
 
@@ -24,16 +28,16 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 212px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 212px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -212px;
     overflow-y: auto;
     background: #ddd;
     -webkit-transition: all 0.5s ease;
@@ -43,7 +47,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 212px;
 }
 
 #page-content-wrapper {
@@ -54,7 +58,7 @@ body {
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -212px;
 }
 
 /* Sidebar Styles */
@@ -62,7 +66,7 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 212px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -104,17 +108,18 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
+    height: 70px;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 70px;
+    background-color: #CCC;
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: #777;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #000;
     background: none;
 }
 
@@ -132,7 +137,7 @@ ul li a.logo-title {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 212px;
     }
 
     #wrapper.toggled {
@@ -140,7 +145,7 @@ ul li a.logo-title {
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 212px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -213,7 +218,7 @@ th {
 }
 
 .media-rating.media-rating_gray {
-  background-color: lightgray;  
+  background-color: #ddd;  
 }
 
 .media-cost {
@@ -279,20 +284,20 @@ th {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  font-weight: bolder;
+  font-weight: 900;
   font-size: 24px;
   color: 111;
 }
 
 .topic-head {
-  height: 44px;
-  background-color: lightgray;
+  height: 40px;
+  background-color: #eee;
 }
 
 .topic-head-text {
   font-size: 24px;
   font-weight: 300;
-  line-height: 44px;
+  line-height: 40px;
 }
 
 a.topic-head-text {
