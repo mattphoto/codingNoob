@@ -1,7 +1,7 @@
 angular.module('myApp')
 
 .controller('WelcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
-  $rootScope.path = 'Hello';
+  $rootScope.path = 'hi.';
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
   $rootScope.path = $location.path().slice(9);
@@ -11,7 +11,6 @@ angular.module('myApp')
 }])
 .controller('AdminController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {
   $http.get('api').success(function(data) {
-    console.log(data[0].title);
     $scope.resources = data;
     $scope.gotoDetailView = function (resource) {
       $location.url('/admin/' + resource._id);
