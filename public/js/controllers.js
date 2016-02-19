@@ -44,7 +44,13 @@ angular.module('myApp')
   }])
 .controller('NewResourceController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http) {
   $scope.resource = {};
+
   $scope.save = function (resource) {
+    var authorCaptalize = resource.author;
+    console.log('hi', typeof(authorCaptalize));
+
+
+
     $http.post('api/', resource).success(function(data) {
       console.log(data);
       $location.url('/admin');
