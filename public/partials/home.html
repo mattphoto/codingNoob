@@ -1,6 +1,6 @@
 
 <div class="container-fluid" >
-  <div class="row"  ng-repeat="resource in resources | orderBy:'title'">
+  <div class="row"  ng-repeat="resource in resources | orderBy:'-rating' | limitTo: 10">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
         <div ng-class="['media-rating', {'media-rating_gray' : !resource.rating,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
@@ -14,14 +14,14 @@
         <p class="media-title">
           <a href="{{ resource.url }}" target="_blank">{{resource.title}}</a>
         </p>
-        <p class="media-author">
+        <p class="media-author" ng-if="resource.type">
           by {{resource.author}} 
         </p>
         <p ng-show="hoveredState" class="media-description">
           {{resource.description}} 
         </p>
       </div>
-      <div class="media-right media-criterion hidden-xs hidden-sm" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false">
+      <div class="media-right media-criterion hidden-xs hidden-sm" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false" ng-if="resource.rating !== 100">
         <p class="media-criterion__difficulty" ng-if="resource.difficulty">
           <span ng-class="['glyphicon', 'glyphicon-stop', 'green']" aria-hidden="true"></span>&nbsp;
           {{resource.difficulty}} 

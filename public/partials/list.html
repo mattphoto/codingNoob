@@ -23,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="resource in resources | filter: search | orderBy:'title'">
+          <tr ng-repeat="resource in resources | filter: search | orderBy: ['category', 'rating']">
             <td> {{ resource.rating }} </td>
             <td  ng-click="gotoDetailView(resource)"> {{ resource.title }} </td>
 

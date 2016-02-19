@@ -1,7 +1,7 @@
 angular.module('myApp')
 
 .controller('WelcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
-  $rootScope.path = 'Welcome!';
+  $rootScope.path = 'Hi.';
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
   $rootScope.path = $location.path().slice(9);
