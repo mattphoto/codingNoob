@@ -4,7 +4,7 @@ angular.module('myApp')
   $rootScope.path = 'hi.';
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
-  $rootScope.path = $location.path().slice(9);
+  $rootScope.path = $location.path().slice(10);
   $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;
   });
@@ -46,11 +46,6 @@ angular.module('myApp')
   $scope.resource = {};
 
   $scope.save = function (resource) {
-    var authorCaptalize = resource.author;
-    console.log('hi', typeof(authorCaptalize));
-
-
-
     $http.post('api/', resource).success(function(data) {
       console.log(data);
       $location.url('/admin');
