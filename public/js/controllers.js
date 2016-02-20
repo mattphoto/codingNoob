@@ -4,7 +4,7 @@ angular.module('myApp')
   $rootScope.path = 'hi.';
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
-  $rootScope.path = $location.path().slice(10);
+  $rootScope.path = $location.path().slice(9);
   $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;
   });
