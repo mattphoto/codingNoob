@@ -3,7 +3,7 @@ angular.module('myApp')
 .controller('WelcomeController', ['$scope', '$rootScope', function($scope, $rootScope) {
   $rootScope.path = 'hi.';
 }])
-.controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', function($scope, $rootScope, $location, $http, $route) {
+.controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', '$sanitize', function($scope, $rootScope, $location, $http, $route, $sanitize) {
   $rootScope.path = $location.path().slice(9);
   $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;

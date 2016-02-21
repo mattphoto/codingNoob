@@ -193,7 +193,6 @@ th {
   background-image: linear-gradient(178deg, 
     rgb(255, 255, 255) 20%, rgb(240, 240, 240) 100%);
   box-shadow: rgb(221, 221, 221) 1px 1px 7px 0px;
-
 }
 
 .media-rating {
@@ -204,9 +203,8 @@ th {
   font-weight: 700;
   line-height: 56px;
   color: #EEE;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   background-color: gray;  
-
 }
 
 .media-rating_red {
@@ -218,14 +216,14 @@ th {
 }
 
 .media-rating.media-rating_gray {
-  background-color: #ddd;  
+  background-color: #ddd; 
+  color: #ddd; 
 }
 
 .media-cost {
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
-
 }
 
 .media-body {
@@ -246,11 +244,19 @@ th {
   color: #999;
 }
 
+.media-title a:hover {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
 .media-author {
   font-weight: 300;
+  font-style: italic;
 }
 
 .media-description {
+  padding-right: 30px;
   -webkit-transition:all linear .2s;
   transition:all linear .2s;
 

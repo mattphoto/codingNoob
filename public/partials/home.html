@@ -3,7 +3,7 @@
   <div class="row"  ng-repeat="resource in resources | orderBy:'-rating' | limitTo: 10">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
-        <div ng-class="['media-rating', {'media-rating_gray' : !resource.rating,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
+        <div ng-class="['media-rating', {'media-rating_gray' : resource.rating === 0,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
           {{resource.rating}}
         </div>
         <p ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
@@ -17,7 +17,7 @@
         <p class="media-author" ng-if="resource.author">
           by {{resource.author}} 
         </p>
-        <p ng-show="hoveredState" class="media-description">
+        <p ng-show="hoveredState" class="media-description" ng-bind-html="resource.description">>
           {{resource.description}} 
         </p>
       </div>
@@ -34,6 +34,7 @@
           <span ng-class="['glyphicon', 'glyphicon-stop', 'gray']" aria-hidden="true"></span>&nbsp;
           {{resource.type}} <span class="media-criterion__length">| {{resource.length}}</span>
         </p>
+
       </div>
     </div>
   </div>
