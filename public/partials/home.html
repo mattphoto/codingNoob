@@ -6,7 +6,7 @@
         <div ng-class="['media-rating', {'media-rating_gray' : resource.rating === 0,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
           {{resource.rating}}
         </div>
-        <p ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
+        <p ng-show="hoveredState" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
           {{resource.cost}}
         </p>
       </div>
@@ -17,7 +17,7 @@
         <p class="media-author" ng-if="resource.author">
           by {{resource.author}} 
         </p>
-        <p ng-show="hoveredState" class="media-description" ng-bind-html="resource.description">>
+        <p ng-hide="!hoveredState" class="media-description" ng-bind-html="resource.description">>
           {{resource.description}} 
         </p>
       </div>

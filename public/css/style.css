@@ -28,16 +28,16 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 212px;
+    padding-left: 242px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 212px;
+    left: 242px;
     width: 0;
     height: 100%;
-    margin-left: -212px;
+    margin-left: -242px;
     overflow-y: auto;
     background: #ddd;
     -webkit-transition: all 0.5s ease;
@@ -47,7 +47,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 212px;
+    width: 242px;
 }
 
 #page-content-wrapper {
@@ -58,7 +58,7 @@ body {
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -212px;
+    margin-right: -242px;
 }
 
 /* Sidebar Styles */
@@ -66,7 +66,7 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 212px;
+    width: 242px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -137,7 +137,7 @@ ul li a.logo-title {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 212px;
+        padding-left: 242px;
     }
 
     #wrapper.toggled {
@@ -145,7 +145,7 @@ ul li a.logo-title {
     }
 
     #sidebar-wrapper {
-        width: 212px;
+        width: 242px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -203,7 +203,7 @@ th {
   font-weight: 700;
   line-height: 56px;
   color: #EEE;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   background-color: gray;  
 }
 
@@ -257,14 +257,13 @@ th {
 
 .media-description {
   padding-right: 30px;
-  -webkit-transition:all linear .2s;
-  transition:all linear .2s;
-
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .media-right p,
 .media-left p {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   vertical-align: top;
 
 }
@@ -291,7 +290,7 @@ th {
 
 .sidebar-nav > .sidebar-brand a {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 28px;
   color: 111;
 }
 
