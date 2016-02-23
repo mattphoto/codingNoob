@@ -23,7 +23,7 @@
       </div>
       <div class="media-right media-criterion hidden-xs hidden-sm" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false" ng-if="resource.rating !== 100">
         <p class="media-criterion__difficulty" ng-if="resource.difficulty">
-          <span ng-class="['glyphicon', 'glyphicon-stop', 'green']" aria-hidden="true"></span>&nbsp;
+          <span ng-class="['glyphicon', 'glyphicon-stop', {'green' : resource.difficulty === 'beginner',  'yellow' : resource.difficulty === 'intermediate', 'red' : resource.difficulty === 'advanced'}]" aria-hidden="true"></span>&nbsp;
           {{resource.difficulty}} 
         </p>
         <p class="media-criterion__difficulty" ng-if="resource.date_published">
