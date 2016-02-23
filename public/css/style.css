@@ -244,12 +244,12 @@ th {
 
 .media-title {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 
 .media-title a {
-  color: #999;
+  color: #888;
 }
 
 .media-title a:hover {
