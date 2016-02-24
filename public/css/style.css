@@ -76,13 +76,13 @@ body {
   text-indent: 20px;
   line-height: 40px;
   background-color: #ddd;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
 }
 
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
   color: #000;
-  border-bottom: 1px solid rgba(255,255,255,0.8);
 }
 
 .sidebar-nav li a:hover {
@@ -125,11 +125,19 @@ body {
 
 .sidebar-nav li.sidebar-footer {
   background-color: #bbb;
-  height: 24px;
-  line-height: 24px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   border-bottom: none;
+  border-bottom: 1px solid rgba(128,128,128,0.2);
+
+}
+
+.sidebar-nav li.sidebar-footer a {
+  color: #888;
+}
+
+.sidebar-nav li.sidebar-footer a:hover {
+  color: #FFF;
 }
 
 .logo {
@@ -142,7 +150,11 @@ ul li a.logo-title {
   font-size: 28px;
 }
 
-
+.body-text {
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 14px;
+}
 
 @media(min-width:768px) {
   #wrapper {
@@ -162,7 +174,7 @@ ul li a.logo-title {
   }
 
   #page-content-wrapper {
-    padding: 14px 28px;
+    padding: 28px;
     position: relative;
   }
 
@@ -170,6 +182,13 @@ ul li a.logo-title {
     position: relative;
     margin-right: 0;
   }
+
+  .body-text {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
 }
 
 
@@ -271,6 +290,18 @@ th {
   padding-right: 30px;
   font-size: 15px;
   font-weight: 400;
+}
+
+.media-description a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #777;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.media-description a:hover {
+  color: #000;
+  border-bottom: 1px solid rgba(0,0,0,.8);
 }
 
 .media-right p,
