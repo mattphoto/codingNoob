@@ -3,7 +3,17 @@
   <div class="row"  ng-repeat="resource in resources | orderBy:'-rating' | limitTo: 100">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
-        <div ng-class="['media-rating', {'media-rating_gray' : resource.rating === 0,  'media-rating_green' : resource.rating > 75,  'media-rating_red' : resource.rating < 25 }]">
+        <div ng-class="['media-rating', {
+          'media-rating_gray' : resource.rating === 0
+          ,'green-dark' : resource.rating > 89
+          ,'green-normal' : resource.rating > 79 && resource.rating < 90
+          ,'green-light' : resource.rating > 69 && resource.rating < 80
+          ,'yellow-dark' : resource.rating > 59 && resource.rating < 70  
+          ,'yellow-normal' : resource.rating > 49 && resource.rating < 60  
+          ,'yellow-light' : resource.rating > 39 && resource.rating < 50  
+          ,'red-light' : resource.rating > 29 && resource.rating < 40  
+          ,'red-normal' : resource.rating < 30  
+          }]">
           {{resource.rating}}
         </div>
         <p ng-show="hoveredState" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
@@ -26,15 +36,14 @@
           <span ng-class="['glyphicon', 'glyphicon-stop', {'green' : resource.difficulty === 'beginner',  'yellow' : resource.difficulty === 'intermediate', 'red' : resource.difficulty === 'advanced'}]" aria-hidden="true"></span>&nbsp;
           {{resource.difficulty}} 
         </p>
+        <p class="media-criterion__difficulty" ng-if="resource.type">
+          <span ng-class="['glyphicon', 'glyphicon-stop', 'gray']" aria-hidden="true"></span>&nbsp;
+          {{resource.type}} <span class="media-criterion__length"><span ng-if="resource.length">| {{resource.length}}</span></span>
+        </p>
         <p class="media-criterion__difficulty" ng-if="resource.date_published">
           <span ng-class="['glyphicon', 'glyphicon-stop', {'green' : resource.date === 'fresh', 'yellow' : resource.date === 'stale', 'red' : resource.date === 'old'}]" aria-hidden="true"></span>&nbsp;
           {{resource.date_published}} 
         </p>
-        <p class="media-criterion__difficulty" ng-if="resource.type">
-          <span ng-class="['glyphicon', 'glyphicon-stop', 'gray']" aria-hidden="true"></span>&nbsp;
-          {{resource.type}} <span class="media-criterion__length">| {{resource.length}}</span>
-        </p>
-
       </div>
     </div>
   </div>

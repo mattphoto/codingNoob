@@ -276,22 +276,6 @@ th {
 
 }
 
-.green {
-  color: green;
-}
-
-.gray {
-  color: lightgray;
-}
-
-.yellow {
-  color: yellow;
-}
-
-.red {
-  color: red;
-}
-
 .media-right {
   width: 22%;
 }
@@ -316,4 +300,54 @@ th {
 a.topic-head-text {
   text-decoration: none;
   color: #000;
+}
+
+
+
+/*********** COLORS **********/
+
+.green-dark {
+  background-color: #008000;
+}
+.green-normal {
+  background-color: #4CAF50;
+}
+.green-light {
+  background-color: #8BC34A;
+}
+
+.yellow-dark {
+  background-color: #CDDC39;
+}
+.yellow-normal {
+  background-color: #FFC107;
+}
+.yellow-light {
+  background-color: #f39c12;
+}
+
+.red-dark {
+  background-color: #c0392b;
+}
+.red-normal {
+  background-color: #c0392b;
+}
+.red-light {
+  background-color: #F45320;
+}
+
+.gray {
+  color: lightgray;
+}
+
+.yellow {
+  color: #FFC107;
+}
+
+.red {
+  color: #c0392b;
+}
+
+.green {
+  color: #008000;
 }
