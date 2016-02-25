@@ -53,4 +53,16 @@ angular.module('myApp')
     });
     console.log(resource);
   }
-}]);
+  }])
+.controller('AboutController', ['$scope', '$rootScope', function($scope, $rootScope) {
+  $rootScope.path = 'about';
+  }])
+.controller('SubmitController', ['$scope', '$rootScope', function($scope, $rootScope) {
+  $rootScope.path = 'submit';
+}])
+
+
+
+
+
+;

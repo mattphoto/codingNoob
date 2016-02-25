@@ -25,11 +25,16 @@ angular.module('myApp', [
     templateUrl: 'partials/resource.html',
     controller: 'ResourceController'
   })
-
+  .when('/about', {
+    templateUrl: 'partials/about.html',
+    controller: 'AboutController'
+  })
+  .when('/submit', {
+    templateUrl: 'partials/submit.html',
+    controller: 'SubmitController'
+  })
   .otherwise({
     redirectTo: '/'
   });
   $locationProvider.html5Mode(true);
 }]);
-
-
