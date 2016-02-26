@@ -39,7 +39,7 @@ body {
   height: 100%;
   margin-left: -242px;
   overflow-y: auto;
-  background: #bbb;
+  background: #999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -75,7 +75,7 @@ body {
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;
-  background-color: #ddd;
+  background-color: #eee;
   border-bottom: 1px solid rgba(255,255,255,0.8);
 }
 
@@ -113,11 +113,11 @@ body {
   height: 70px;
   font-size: 18px;
   line-height: 70px;
-  background-color: #CCC;
+  background-color: #999;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #777;
+  color: #666;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -126,16 +126,20 @@ body {
 }
 
 .sidebar-nav li.sidebar-footer {
-  background-color: #bbb;
-  font-size: 14px;
+  background-color: #999;
+  font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase; 
   border-bottom: none;
   border-bottom: 1px solid rgba(128,128,128,0.2);
-
 }
 
 .sidebar-nav li.sidebar-footer a {
-  color: #888;
+  color: #444;
+}
+
+.sidebar-nav li.sidebar-intermediate {
+  background-color: #ddd;
 }
 
 .logo {
@@ -217,7 +221,7 @@ th {
   padding: 14px;
   background-image: linear-gradient(178deg, 
     rgb(255, 255, 255) 20%, rgb(240, 240, 240) 100%);
-  box-shadow: rgb(221, 221, 221) 1px 1px 7px 0px;
+  box-shadow: rgb(221, 221, 221) 1px 1px 5px 0px;
 }
 
 .media-rating {
@@ -227,7 +231,7 @@ th {
   font-size: 30px;
   font-weight: 700;
   line-height: 60px;
-  color: rgba(255,255,255,0.5);;
+  color: rgba(255,255,255,0.6);;
   margin-bottom: 4px;
   background-color: gray;  
 }
