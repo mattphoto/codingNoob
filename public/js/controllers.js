@@ -59,10 +59,8 @@ angular.module('myApp')
   }])
 .controller('SubmitController', ['$scope', '$rootScope', function($scope, $rootScope) {
   $rootScope.path = 'submit';
-}])
-
-
-
-
-
+  }])
+.controller('ColophonController', ['$scope', '$rootScope', function($scope, $rootScope) {
+  $rootScope.path = 'colophon';
+  }])
 ;

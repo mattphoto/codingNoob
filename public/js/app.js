@@ -33,6 +33,10 @@ angular.module('myApp', [
     templateUrl: 'partials/submit.html',
     controller: 'SubmitController'
   })
+  .when('/colophon', {
+    templateUrl: 'partials/colophon.html',
+    controller: 'ColophonController'
+  })
   .otherwise({
     redirectTo: '/'
   });
