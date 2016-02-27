@@ -158,6 +158,19 @@ ul li a.logo-title {
   margin-top: 14px;
 }
 
+.loading-screen {
+  font-weight: 800;
+  font-size: 64px;
+  color: #eee;
+  margin-top: 60px;
+  text-align: center;
+
+}
+
+
+
+/*********** MEDIA QUERIES  ***********/
+
 @media(min-width:768px) {
   #wrapper {
     padding-left: 242px;
