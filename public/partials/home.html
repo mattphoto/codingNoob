@@ -5,8 +5,8 @@
       <div ng-if="resource.rating !== 100" class="media-left">
         <div ng-class="['media-rating', {
           'media-rating_gray' : resource.rating === 0
-          ,'green-dark' : resource.rating > 89
-          ,'green-normal' : resource.rating > 79 && resource.rating < 90
+          ,'green-dark' : resource.rating > 84
+          ,'green-normal' : resource.rating > 79 && resource.rating < 85
           ,'green-light' : resource.rating > 69 && resource.rating < 80
           ,'yellow-dark' : resource.rating > 59 && resource.rating < 70  
           ,'yellow-normal' : resource.rating > 49 && resource.rating < 60  
@@ -22,7 +22,10 @@
       </div>
       <div class="media-body" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false">
         <p class="media-title">
-          <a href="{{ resource.url }}" target="_blank">{{resource.title}}</a>
+          <a href="{{ resource.url }}" target="_blank" ng-if="resource.rating !== 100" >{{resource.title}}</a>
+          <span ng-if="resource.rating === 100" class="
+
+          ">{{resource.title}}</span>
         </p>
         <p class="media-author" ng-if="resource.author">
           by {{resource.author}} 

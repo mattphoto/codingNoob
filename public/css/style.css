@@ -242,7 +242,7 @@ th {
   height: 60px;
   text-align: center;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 60px;
   color: rgba(255,255,255,0.6);;
   margin-bottom: 4px;
@@ -264,7 +264,7 @@ th {
 
 .media-cost {
   text-align: center;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
@@ -331,8 +331,8 @@ th {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  font-weight: 900;
-  font-size: 28px;
+  font-weight: 300;
+  font-size: 32px;
   color: 111;
 }
 
