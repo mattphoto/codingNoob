@@ -94,6 +94,7 @@ body {
   font-weight: 800;
   color: #FFF;
   background-color: #666;
+  transition: background-color 200ms ease-in-out;
 }
 
 .sidebar-nav li a.selected, 
