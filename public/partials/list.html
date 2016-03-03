@@ -23,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="resource in resources | filter: search | orderBy: ['category', '-rating']">
+          <tr ng-repeat="resource in resources | filter: search | orderBy: ['-updated_at']">
             <td> {{ resource.rating }} </td>
             <td  ng-click="gotoDetailView(resource)"> {{ resource.title }} </td>
 
@@ -31,7 +31,7 @@
             <td> {{ resource.difficulty }} </td>
             <td> {{ resource.type }} </td>
             <td> {{ resource.length }} </td>
-            <td> {{ resource.updated_at }} </td>
+            <td> {{ resource.updated_at  | date:'short' }} </td>
 
             <td> <a href="#" ng-click="delete(resource._id)">del</a>
             </td>
