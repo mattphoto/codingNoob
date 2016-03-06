@@ -10,6 +10,7 @@ var routes = function (Resource) {
       var resource = new Resource(req.body);
       console.log(resource);
       resource.created_at = new Date();
+      resource.updated_at = new Date();
 
       console.log(req.body);
       resource.save();

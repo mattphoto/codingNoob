@@ -38,7 +38,7 @@ angular.module('myApp')
   });
   $scope.update = function(resource) {
     $http.put('api/' + item, resource).success(function(data) {
-      console.log(data);
+      console.log('ResourceController' + data);
       $location.url('/admin');
     })};
   }])
@@ -47,7 +47,6 @@ angular.module('myApp')
 
   $scope.save = function (resource) {
     $http.post('api/', resource).success(function(data) {
-      console.log(data);
       $location.url('/admin');
 
     });
