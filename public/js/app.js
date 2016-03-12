@@ -3,6 +3,13 @@ angular.module('myApp', [
   'ngSanitize',
   'ngAnimate'
 ])
+.directive('animateMe', function() {
+   return function(scope, element, attrs) {
+      scope.$watch(attrs.animateMe, function() {
+         element.slideToggle(150);
+      })
+   }
+})
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {

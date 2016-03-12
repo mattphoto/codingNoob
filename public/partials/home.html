@@ -1,5 +1,5 @@
 
-<div class="container-fluid" >
+<div class="container-fluid">
   <div class="row"  ng-repeat="resource in resources | orderBy: ['-rating', '-updated_at'] | limitTo: 100">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
@@ -16,25 +16,23 @@
           }]">
           {{resource.rating}}
         </div>
-        <p ng-show="hoveredState" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
+        <p animate-me="animateToggle" ng-hide="false" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
           {{resource.cost}}
         </p>
       </div>
-      <div class="media-body" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false">
+      <div class="media-body" ng-mouseenter="animateToggle = !animateToggle" ng-mouseleave="animateToggle = !animateToggle">
         <p class="media-title">
           <a href="{{ resource.url }}" target="_blank" ng-if="resource.rating !== 100" >{{resource.title}}</a>
-          <span ng-if="resource.rating === 100" class="
-
-          ">{{resource.title}}</span>
+          <span ng-if="resource.rating === 100">{{resource.title}}</span>
         </p>
         <p class="media-author" ng-if="resource.author">
           by {{resource.author}} 
         </p>
-        <p ng-hide="!hoveredState" class="media-description" ng-bind-html="resource.description">>
+        <p animate-me="animateToggle" ng-hide="false" class="media-description" ng-bind-html="resource.description">
           {{resource.description}} 
         </p>
       </div>
-      <div class="media-right media-criterion hidden-xs hidden-sm" ng-mouseenter="hoveredState=true" ng-mouseleave="hoveredState=false" ng-if="resource.rating !== 100">
+      <div class="media-right media-criterion hidden-xs hidden-sm" ng-if="resource.rating !== 100">
         <p class="media-criterion__difficulty" ng-if="resource.difficulty">
           <span ng-class="['glyphicon', 'glyphicon-stop', {'green' : resource.difficulty === 'beginner',  'yellow' : resource.difficulty === 'intermediate', 'red' : resource.difficulty === 'advanced'}]" aria-hidden="true"></span>&nbsp;
           {{resource.difficulty}} 
