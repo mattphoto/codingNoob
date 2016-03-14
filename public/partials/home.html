@@ -16,7 +16,7 @@
           }]">
           {{resource.rating}}
         </div>
-        <p animate-me="animateToggle" ng-hide="false" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
+        <p animate-slide="animateToggle" ng-hide="false" ng-class="['media-cost', {'green' : resource.cost === 'free',  'red' : resource.cost === 'paid'}]">
           {{resource.cost}}
         </p>
       </div>
@@ -28,7 +28,7 @@
         <p class="media-author" ng-if="resource.author">
           by {{resource.author}} 
         </p>
-        <p animate-me="animateToggle" ng-hide="false" class="media-description" ng-bind-html="resource.description">
+        <p animate-slide="animateToggle" ng-hide="false" class="media-description" ng-bind-html="resource.description">
           {{resource.description}} 
         </p>
       </div>

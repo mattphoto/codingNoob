@@ -5,8 +5,7 @@ angular.module('myApp')
 }])
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', '$sanitize', function($scope, $rootScope, $location, $http, $route, $sanitize) {
   $rootScope.path = $location.path().slice(9);
-      $scope.animateToggle = false;
-
+  $scope.animateToggle = false;
   $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;
   });

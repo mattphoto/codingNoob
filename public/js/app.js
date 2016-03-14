@@ -1,11 +1,10 @@
 angular.module('myApp', [
   'ngRoute',
-  'ngSanitize',
-  'ngAnimate'
+  'ngSanitize'
 ])
-.directive('animateMe', function() {
+.directive('animateSlide', function() {
    return function(scope, element, attrs) {
-      scope.$watch(attrs.animateMe, function() {
+      scope.$watch(attrs.animateSlide, function() {
          element.slideToggle(150);
       })
    }
