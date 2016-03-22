@@ -238,16 +238,20 @@ th {
   box-shadow: rgb(221, 221, 221) 1px 1px 5px 0px;
 }
 
-.media-rating {
+.media-rating-box {
   width: 60px;
   height: 60px;
   text-align: center;
   font-size: 30px;
   font-weight: 600;
+  color: rgba(255,255,255,0);;
   line-height: 60px;
-  color: rgba(255,255,255,0.6);;
   margin-bottom: 4px;
   background-color: gray;  
+}
+
+.media-rating-temp {
+  color: rgba(255,255,255,0.4);;
 }
 
 .media-rating_red {
@@ -258,7 +262,7 @@ th {
   background-color: green;  
 }
 
-.media-rating.media-rating_gray {
+.media-rating-box.media-rating-gray {
   background-color: #ddd; 
   color: #ddd; 
 }

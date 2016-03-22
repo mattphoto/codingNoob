@@ -3,8 +3,9 @@
   <div class="row"  ng-repeat="resource in resources | orderBy: ['-rating', '-updated_at'] | limitTo: 100">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
-        <div ng-class="['media-rating', {
-          'media-rating_gray' : resource.rating < 10
+        <div ng-class="['media-rating-box', 
+          {'media-rating-temp' : resource.rating % 10 !== 0}, {
+          'media-rating-gray' : resource.rating < 10
           ,'green-dark' : resource.rating > 84
           ,'green-normal' : resource.rating > 74 && resource.rating < 85
           ,'green-light' : resource.rating > 64 && resource.rating < 75
