@@ -91,9 +91,9 @@ body {
   width: 500px;
   margin: 0;
   list-style: none;
-  font-weight: 800;
-  color: #FFF;
-  background-color: #666;
+  font-weight: 600;
+  color: #000;
+  background-color: #bbb;
   transition: background-color 200ms ease-in-out;
 }
 
