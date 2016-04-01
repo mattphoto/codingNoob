@@ -143,6 +143,16 @@ body {
   background-color: #ccc;
   font-weight: 500;
 }
+/*
+li > .sub-bar {
+    padding-left: 10px;
+    font-size: 0.85em;
+}
+
+.sub-bar > .sub-bar {
+    padding-left: 10px;
+    font-size: 0.95em;
+}*/
 
 .logo {
   padding: 15px;
