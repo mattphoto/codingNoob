@@ -367,7 +367,13 @@ a.topic-head-text {
   color: #000;
 }
 
+.caret {
+  margin-left: 6px;
+}
 
+.subnav {
+  padding-left: 12px;
+}
 
 /*********** COLORS **********/
 

@@ -19,17 +19,17 @@
       <a href="/subject/javascript" ng-class="{selected : path === 'javascript'}">Javascript</a>
     </li>
     <li class="sidebar-intermediate">
-      <div data-toggle="collapse" href="#design" aria-expanded="false">DESIGN &nbsp;<span class="caret"></span></div>
+      <div data-toggle="collapse" href="#design" aria-expanded="false">DESIGN / UX<span class="caret"></span></div>
       <div class="collapse sub-bar" id="design">
-        <a href="/subject/ux" ng-class="{selected : path === 'ux'}"> &nbsp; User Experience</a>
+        <a href="/subject/ux" ng-class="['subnav', {selected : path === 'ux'}]">User Experience</a>
       </div>
     </li>
     <li class="sidebar-intermediate">
-      <div data-toggle="collapse" href="#frameworks" aria-expanded="false">FRAMEWORKS &nbsp;<span class="caret"></span></div>
+      <div data-toggle="collapse" href="#frameworks" aria-expanded="false">FRAMEWORKS<span class="caret"></span></div>
       <div class="collapse sub-bar" id="frameworks">
-        <a href="/subject/react" ng-class="{selected : path === 'react'}"> &nbsp; React</a>
-        <a href="/subject/angular" ng-class="{selected : path === 'angular'}"> &nbsp; Angular</a>
-        <a href="/subject/jquery" ng-class="{selected : path === 'jquery'}"> &nbsp; jQuery</a>
+        <a href="/subject/react" ng-class="['subnav', {selected : path === 'react'}]">React</a>
+        <a href="/subject/angular" ng-class="['subnav', {selected : path === 'angular'}]">Angular</a>
+        <a href="/subject/jquery" ng-class="['subnav', {selected : path === 'jquery'}]">jQuery</a>
       </div>
     </li>
     <li class="sidebar-footer">
