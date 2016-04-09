@@ -32,7 +32,14 @@
         <a href="/subject/jquery" ng-class="['subnav', {selected : path === 'jquery'}]">jQuery</a>
       </div>
     </li>
-    <li class="sidebar-footer">
+    <li class="sidebar-intermediate">
+      <div data-toggle="collapse" href="#mobile" aria-expanded="false">MOBILE DEV<span class="caret"></span></div>
+      <div class="collapse sub-bar" id="mobile">
+        <a href="/subject/iOS" ng-class="['subnav', {selected : path === 'iOS'}]">iOS</a>
+        <a href="/subject/android" ng-class="['subnav', {selected : path === 'android'}]">android</a>
+        <a href="/subject/hybrid" ng-class="['subnav', {selected : path === 'hybrid'}]">hybrid</a>
+      </div>
+    </li>    <li class="sidebar-footer">
       &nbsp;
     </li>
     <li class="sidebar-footer">
