@@ -6,8 +6,10 @@ angular.module('myApp')
 .controller('HomeController', ['$scope', '$rootScope', '$location', '$http', '$route', '$sanitize', function($scope, $rootScope, $location, $http, $route, $sanitize) {
   $rootScope.path = $location.path().slice(9);
   $scope.animateToggle = false;
+  $scope.loading = true;
   $http.get('api' + '?category=' + $rootScope.path).success(function(data) {
     $scope.resources = data;
+    $scope.loading = false;
   });
 }])
 .controller('AdminController', ['$scope', '$location', '$http', '$route', function($scope, $location, $http, $route) {

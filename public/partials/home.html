@@ -1,5 +1,10 @@
 
 <div class="container-fluid">
+  <div ng-if="loading">
+    <p class="loading-screen">
+      loading...
+    </p>
+  </div>
   <div class="row"  ng-repeat="resource in resources | orderBy: ['-rating', '-updated_at'] | limitTo: 100">
     <div class="media" >
       <div ng-if="resource.rating !== 100" class="media-left">
