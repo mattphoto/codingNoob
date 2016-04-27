@@ -144,16 +144,6 @@ body {
   font-weight: 500;
   cursor: pointer; 
 }
-/*
-li > .sub-bar {
-    padding-left: 10px;
-    font-size: 0.85em;
-}
-
-.sub-bar > .sub-bar {
-    padding-left: 10px;
-    font-size: 0.95em;
-}*/
 
 .logo {
   padding: 15px;
@@ -178,7 +168,6 @@ ul li a.logo-title {
   margin-top: 60px;
   text-align: center;
 }
-
 
 
 /*********** MEDIA QUERIES  ***********/
